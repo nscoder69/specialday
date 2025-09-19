@@ -43,21 +43,17 @@
             display: none;
         }
         #music-note {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px 0;
-            z-index: 100;
+            margin-bottom: 20px; /* Space between note and container */
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-rose-900 via-rose-700 to-red-900 text-white min-h-screen flex items-center justify-center p-4 overflow-x-hidden">
+<body class="bg-gradient-to-br from-rose-900 via-rose-700 to-red-900 text-white min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden">
     <audio id="background-music" loop>
         <source src="Dil ka jo haal.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <canvas id="hearts-canvas"></canvas>
+    <p id="music-note" class="text-center text-sm opacity-75 hidden">Click anywhere on the screen to start the music! 🎶</p>
 
     <div class="container p-10 max-w-lg w-full text-center hover:scale-105 transition-transform duration-300">
         <div class="animate-float">
@@ -273,5 +269,4 @@
         window.addEventListener('resize', handleResize);
         handleResize();
     </script>
-    <p id="music-note" class="mt-4 text-center text-sm opacity-75 hidden">Click anywhere on the screen to start the music! 🎶</p>
 </body></html>
